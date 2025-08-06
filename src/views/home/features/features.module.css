@@ -1,0 +1,53 @@
+/* features.module.css */
+
+.bgContainer {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  /* Tono café para combinar con la página */
+  /* padding: 50px 0; */
+  text-align: center;
+}
+
+.headerSection h1 {
+  font-size: 40px;
+  color: var(--detail2);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.subContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background-color: #e5c7a2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.featureCard h2 {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color);
+  filter: drop-shadow(0 0 5px rgb(0, 0, 0, 0.3));
+}
+
+.featureCard p {
+  color: #3b2b1a;
+  font-size: 1rem;
+}
