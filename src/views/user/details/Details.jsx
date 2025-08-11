@@ -94,7 +94,7 @@ function Details() {
               </div>
               <div className={styles.food_info}>
                 <div className={styles.food_name}>
-                  <p>
+                  <p className={styles.food_name}>
                     {food.name} - ${price}.00
                   </p>
                 </div>
