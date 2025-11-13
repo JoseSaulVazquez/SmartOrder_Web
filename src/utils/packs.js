@@ -2,7 +2,7 @@ const packs = [
   {
     name: "Aplicación móvil",
     // image: "https://www.smartorder.mx/img/pack_default.png",
-    price: [150],
+    price: [50],
     tipo_pago: "Mensual",
     description: "Tu restaurante formara parte del listado de restaurantes",
     features: [
@@ -14,7 +14,7 @@ const packs = [
   {
     name: "Estandar",
     // image: "https://www.smartorder.mx/img/pack_default.png",
-    price: [800, 150],
+    price: [200, 150],
     tipo_pago: "Mensual",
     description:
       "Paquete por defecto, incluye el asistente de pedidos y la app",
@@ -28,7 +28,7 @@ const packs = [
   {
     name: "Premium",
     // image: "https://www.smartorder.mx/img/pack_premium.png",
-    price: [2500, 150],
+    price: [500, 150],
     tipo_pago: "Mensual",
     description:
       "Paquete Premium, incluye el asistente de pedidos, manejo de mesas (hasta 10 mesas maximo), y la app con personalización",
@@ -43,7 +43,7 @@ const packs = [
   {
     name: "Enterprise",
     // image: "https://www.smartorder.mx/img/pack_enterprise.png",
-    price: [5000, 150],
+    price: [1000, 150],
     tipo_pago: "Mensual",
     description:
       "Paquete Enterprise. Incluye el asistente de pedidos, manejo de mesas sin limite, la app con personalización y soporte las 24 hrs",

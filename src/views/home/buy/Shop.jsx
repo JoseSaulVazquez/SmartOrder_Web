@@ -10,6 +10,7 @@ import classNames from "classnames";
 import google from "././../../../assets/varios/google-store.png";
 import windows from "././../../../assets/varios/windows-store.png";
 import apple from "././../../../assets/varios/apple-store.png";
+import aptoide from "././../../../assets/varios/aptoide.jpg";
 import { RightImage } from "../../../components/layouts/Layouts";
 
 function Shop() {
@@ -40,7 +41,7 @@ function Shop() {
           <div className={styles.opacity}>
             <div className={styles.subContainer}>
               <h1 className={classNames(styles.app, styles.title)}>
-                smartOrder <span>v0.01 {platform}</span>
+                smartOrder <span>v0.5</span>
               </h1>
               <div
                 className={classNames(
@@ -48,21 +49,16 @@ function Shop() {
                   styles.mbottom
                 )}
               >
+                
                 <button className={styles.platform}>
-                  <img src={windows} alt="windows store" />
-                </button>
-                <button className={styles.platform}>
-                  <img src={google} alt="google play" />
-                </button>
-                <button className={styles.platform}>
-                  <img src={apple} alt="apple store" />
+                  <img src={aptoide} alt="aptoide" />
                 </button>
               </div>
 
               <div className={styles.horizonralContainer}>
                 <Link
                   className={classNames(styles.button, styles.download)}
-                  to="/download"
+                  to="https://es.aptoide.com/"
                   target="_blank"
                 >
                   <div>

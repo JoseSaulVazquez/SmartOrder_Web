@@ -68,6 +68,7 @@
 
 .info p {
     font-size: 20px;
+    margin-left: 1px;
 }
 
 .secondTitle {
@@ -76,4 +77,23 @@
     color: rgb(255, 255, 255);
     /* color: var(--detail2); */
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    margin-left: 120px;
+}
+
+.secondTitle2 {
+    margin-top: 0;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    /* color: var(--detail2); */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    margin-left: 135px;
+}
+
+.secondTitle3 {
+    margin-top: 0;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    /* color: var(--detail2); */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    margin-left: 35px;
 }
