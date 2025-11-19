@@ -4,7 +4,7 @@ import styles from "./nav.module.css";
 import classNames from "classnames";
 import Logo from "../../assets/Logo.png";
 import { userData } from "../../utils/Users";
-import { Menu } from "../menu/Menu";
+
 
 function Navbar() {
   const location = useLocation().pathname;
@@ -83,17 +83,8 @@ function Navbar() {
         }
       )}
     >
-      <Menu open={menuOpen} setOpen={setMenuOpen} />
       <nav className={styles.navbar}>
         <div className={styles.left_section}>
-          <span
-            className={`material-symbols-outlined ${
-              options ? styles.homeLink : styles.smartOrder_Link
-            }`}
-            onClick={() => setMenuOpen(true)}
-          >
-            menu
-          </span>
 
           <Link className={styles.logo} to="/">
             {!(location === "/") && <img src={Logo} alt="smartOrder Logo" />}
