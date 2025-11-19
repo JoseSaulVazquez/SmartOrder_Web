@@ -41,7 +41,7 @@ function Shop() {
           <div className={styles.opacity}>
             <div className={styles.subContainer}>
               <h1 className={classNames(styles.app, styles.title)}>
-                smartOrder <span>v0.5</span>
+                smartOrder
               </h1>
               <div
                 className={classNames(
