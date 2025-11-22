@@ -6,7 +6,7 @@ import Layout from "./utils/Layout.jsx";
 
 import Home from "./views/home/Home.jsx";
 import App from "./views/home/app/App.jsx";
-import Features from "./views/home/features/features.jsx";
+import Features from "./views/home/features/Features.jsx";
 import Shop from "./views/home/buy/Shop.jsx";
 import Pack from "./views/home/buy/Pack.jsx";
 import About from "./views/home/about/About.jsx";
