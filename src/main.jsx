@@ -89,3 +89,7 @@ createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </StrictMode>
 );
+
+
+import { registerSW } from 'virtual:pwa-register'
+registerSW({ immediate: true })
