@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./session.module.css";
 import logo from "./../../../assets/Logo.png";
-import restaurante from "./../../../assets/varios/restaurante.jpg";
+import restaurante from "./../../../assets/varios/Restaurante.jpg";
 import { login } from "../../../utils/Users";
 
 function Login() {
