@@ -75,3 +75,22 @@
   aspect-ratio: 0;
   border-radius: 8px;
 }
+
+/* 🔥 Ocultar imágenes de RightImage y LeftImage SOLO en móvil */
+@media screen and (max-width: 768px) {
+  .image {
+    display: none !important;
+  }
+
+  /* Para que el texto tome el 100% del ancho */
+  .info {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Evita espacio vacío donde antes estaba la imagen */
+  .container {
+    flex-direction: column !important;
+    gap: 10px;
+  }
+}
