@@ -206,6 +206,8 @@ h2 {
     height: auto;
     min-height: 100vh;
     padding-top: 80px;
+    align-items: center !important;
+    justify-content: start !important;
   }
 
   /* Botón de regresar */
@@ -215,14 +217,24 @@ h2 {
     z-index: 10;
   }
 
-  /* Sección izquierda (formulario) pasa a ocupar todo */
+  /* Sección izquierda ocupa todo y centran el contenido */
   .login_left {
     width: 100% !important;
     min-height: auto;
     padding: 20px;
-    justify-content: start;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
+  /* Centrado absoluto del form */
+  .login_container,
+  .login_left,
+  .login_form {
+    margin: 0 auto !important;
+  }
+
+  /* Ajustes de tamaños */
   .login_form,
   .sing_form {
     width: 100% !important;
@@ -248,7 +260,7 @@ h2 {
     padding: 10px;
   }
 
-  /* Inputs dobles en registro: se apilan */
+  /* Inputs dobles del registro en columna */
   .inputmid_group {
     flex-direction: column;
   }
@@ -257,7 +269,7 @@ h2 {
     width: 100% !important;
   }
 
-  /* Botones */
+  /* Botones en columna */
   .button_group {
     flex-direction: column;
     gap: 10px !important;
@@ -268,13 +280,13 @@ h2 {
     font-size: 16px;
   }
 
-  /* Ocultar imagen derecha */
+  /* Ocultar imagen */
   .login_right {
     display: none !important;
   }
 
-  /* Imagen de restaurante (oculta siempre en móvil) */
   .login_image {
     display: none !important;
   }
 }
+
