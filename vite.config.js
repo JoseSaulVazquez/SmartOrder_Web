@@ -48,12 +48,21 @@ export default defineConfig({
         ]
       },
 
-workbox: {
-  globPatterns: ['**/*.{js,css,html,png,svg,jpg,jpeg,ico}'],
-  navigateFallback: '/index.html',
-  cleanupOutdatedCaches: true,
-  maximumFileSizeToCacheInBytes: 20 * 1024 * 1024 // 20 MB
-}
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,svg,jpg,jpeg,ico}'],
+        cleanupOutdatedCaches: true,
+        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024,
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) =>
+              request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'html-cache'
+            }
+          }
+        ]
+      }
 
     })
   ]
