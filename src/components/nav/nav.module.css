@@ -124,3 +124,92 @@
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 }
 
+/* 📱📱📱 — RESPONSIVE NAVBAR (MÓVIL) */
+@media screen and (max-width: 768px) {
+
+  /* Ajustar header */
+  .header {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .navbar {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  /* LOGO */
+  .logo h1 {
+    font-size: 20px !important;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  /* Ocultar menú derecho */
+  .right_section {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    height: calc(100vh - 70px);
+    width: 70%;
+    background: rgba(50,50,50,0.97);
+    padding: 40px 20px;
+    flex-direction: column;
+    gap: 25px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  }
+
+  /* Mostrar cuando se abre */
+  .right_section.open {
+    right: 0;
+  }
+
+  .right_section a {
+    color: white !important;
+    font-size: 22px;
+  }
+
+  /* HAMBURGUESA */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .line {
+    width: 28px;
+    height: 3px;
+    background: var(--color);
+    transition: 0.3s ease;
+  }
+
+  /* ANIMACIONES */
+  .line1Active {
+    transform: rotate(45deg) translateY(8px);
+    width: 28px;
+    height: 3px;
+    background: var(--color);
+  }
+
+  .line2Active {
+    opacity: 0;
+  }
+
+  .line3Active {
+    transform: rotate(-45deg) translateY(-8px);
+    width: 28px;
+    height: 3px;
+    background: var(--color);
+  }
+
+  /* Ocultar menú si no es hamburguesa */
+  .left_section {
+    z-index: 100;
+  }
+}
+
