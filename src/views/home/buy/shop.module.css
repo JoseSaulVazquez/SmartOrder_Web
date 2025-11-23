@@ -3,10 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('src/assets/varios/shop_bg.jpg') no-repeat center center;
     background-size: cover;
     height: 80vh;
 }
+
 
 .opacity {
     width: 100%;

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { PriceCard } from "../../../components/cards/Cards";
 import { packs } from "../../../utils/packs";
 import classNames from "classnames";
+import bg from "../../../assets/varios/shop_bg.jpg";
 
 import google from "././../../../assets/varios/google-store.png";
 import windows from "././../../../assets/varios/windows-store.png";
@@ -37,7 +38,7 @@ function Shop() {
       <Navbar />
 
       <main className="bg_container">
-        <div className={styles.background}>
+        <div className={styles.background} style={{ backgroundImage: `url(${bg})` }}>
           <div className={styles.opacity}>
             <div className={styles.subContainer}>
               <h1 className={classNames(styles.app, styles.title)}>
