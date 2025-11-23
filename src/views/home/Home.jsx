@@ -140,9 +140,6 @@ function Home() {
               title="Descarga nuestra App Móvil"
               extra={
                 <div className={styles.verticalContainer}>
-                  <span className={styles.detailText}>
-                    Disponible Proximaemente
-                  </span>
                   <Link
                     className={classNames(
                       styles.button,

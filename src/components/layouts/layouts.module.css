@@ -76,21 +76,31 @@
   border-radius: 8px;
 }
 
-/* 🔥 Ocultar imágenes de RightImage y LeftImage SOLO en móvil */
+
 @media screen and (max-width: 768px) {
+
   .image {
     display: none !important;
   }
 
-  /* Para que el texto tome el 100% del ancho */
+  /* Para que el contenido se adapte */
   .info {
     width: 100% !important;
     text-align: center;
   }
 
-  /* Evita espacio vacío donde antes estaba la imagen */
+  /* Para que el layout no deje espacios vacíos */
   .container {
     flex-direction: column !important;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Asegurar que el texto quede centrado en App.jsx */
+  .horizontal {
+    flex-direction: column !important;
+    text-align: center;
   }
 }
+
