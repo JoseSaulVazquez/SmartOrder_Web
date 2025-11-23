@@ -83,7 +83,7 @@ function Sing_in() {
       <div className={styles.login_left}>
         <div className={styles.sing_form}>
           <img src={logo} alt="Logo" className={styles.login_logo} />
-          <h2>Regsitrar</h2>
+          <h2>Registrar</h2>
           <form onSubmit={regsiter}>
             {step === 0 && (
               <div className={styles.inputs_group}>

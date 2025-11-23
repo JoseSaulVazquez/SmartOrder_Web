@@ -154,41 +154,6 @@ h2 {
   width: 88.5%;
 }
 
-/* .sing_form {
-  width: 100%;
-  max-width: 350px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.input_group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.input_group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.inputmid_group {
-  display: flex;
-  gap: 10px;
-}
-
-.inputmid_group .input_group {
-  flex: 1;
-}
- */
 
 .button_group {
   display: flex;
@@ -199,7 +164,7 @@ h2 {
 
 /* 📱📱📱 — RESPONSIVE PARA MÓVILES */
 @media screen and (max-width: 768px) {
-
+  
   /* Contenedor principal */
   .login_container {
     flex-direction: column;
@@ -237,8 +202,8 @@ h2 {
   /* Ajustes de tamaños */
   .login_form,
   .sing_form {
-    width: 100% !important;
-    max-width: 90% !important;
+    width: 70% !important;
+    max-width: 70% !important;
     padding: 25px !important;
   }
 
@@ -255,18 +220,16 @@ h2 {
   }
 
   .input_group input {
-    width: 100% !important;
+    width: 95% !important;
     font-size: 15px;
     padding: 10px;
   }
 
   /* Inputs dobles del registro en columna */
-  .inputmid_group {
-    flex-direction: column;
-  }
+
 
   .inputmid_group input {
-    width: 100% !important;
+    width: 90% !important;
   }
 
   /* Botones en columna */
