@@ -23,8 +23,9 @@ function About() {
           </div>
         </div>
 
-        <section style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
-          <div style={{ width: "100%", maxWidth: "600px", height: "350px", borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}>
+<section style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
+  <div className={styles.mapContainer}>
+
             <iframe
               title="UTZMG Location"
               src="https://www.google.com/maps?q=20.48347,-103.53222&z=17&output=embed"

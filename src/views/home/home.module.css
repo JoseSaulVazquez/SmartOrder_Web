@@ -339,7 +339,7 @@
    📱 RESPONSIVE — MÓVIL PEQUEÑO
    ========================= */
 @media screen and (max-width: 480px) {
-
+  
   .centerImg {
     width: 120px;
     height: 120px;
@@ -376,4 +376,6 @@
   .section_container {
     width: 95%;
   }
+
+  
 }
