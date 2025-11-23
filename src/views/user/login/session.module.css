@@ -196,3 +196,85 @@ h2 {
   justify-content: space-between;
   gap: 20px;
 }
+
+/* 📱📱📱 — RESPONSIVE PARA MÓVILES */
+@media screen and (max-width: 768px) {
+
+  /* Contenedor principal */
+  .login_container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+
+  /* Botón de regresar */
+  .back_button {
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+
+  /* Sección izquierda (formulario) pasa a ocupar todo */
+  .login_left {
+    width: 100% !important;
+    min-height: auto;
+    padding: 20px;
+    justify-content: start;
+  }
+
+  .login_form,
+  .sing_form {
+    width: 100% !important;
+    max-width: 90% !important;
+    padding: 25px !important;
+  }
+
+  .login_logo {
+    width: 90px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  .input_group label {
+    font-size: 15px;
+  }
+
+  .input_group input {
+    width: 100% !important;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* Inputs dobles en registro: se apilan */
+  .inputmid_group {
+    flex-direction: column;
+  }
+
+  .inputmid_group input {
+    width: 100% !important;
+  }
+
+  /* Botones */
+  .button_group {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  .login_button {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  /* Ocultar imagen derecha */
+  .login_right {
+    display: none !important;
+  }
+
+  /* Imagen de restaurante (oculta siempre en móvil) */
+  .login_image {
+    display: none !important;
+  }
+}
