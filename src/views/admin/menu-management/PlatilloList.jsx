@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./Session.module.css";
+import styles from "./MenuManagement.module.css";
 
 export default function PlatilloList({ editarPlatillo }) {
   const [platillos, setPlatillos] = useState([]);

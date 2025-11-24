@@ -5,7 +5,6 @@ import classNames from "classnames";
 import Logo from "../../assets/Logo.png";
 import { userData } from "../../utils/Users";
 
-
 function Navbar() {
   const location = useLocation().pathname;
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
@@ -56,6 +55,9 @@ function Navbar() {
   const options = !(location.split("/")[1] === "smartOrder");
   const active = location.split("/")[1];
   const active2 = location.split("/")[2];
+  const admin = location.split("/")[1] === "admin";
+
+  console.log(admin);
 
   const headerStyle =
     location === "/"
@@ -85,7 +87,6 @@ function Navbar() {
     >
       <nav className={styles.navbar}>
         <div className={styles.left_section}>
-
           <Link className={styles.logo} to="/">
             {!(location === "/") && <img src={Logo} alt="smartOrder Logo" />}
             <h1 className={options ? styles.homeSmart : styles.smartOrder}>
@@ -97,14 +98,18 @@ function Navbar() {
         </div>
 
         {/* BOTÓN HAMBURGUESA SOLO MÓVIL */}
-<div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
-  <span className={menuOpen ? styles.line1Active : styles.line}></span>
-  <span className={menuOpen ? styles.line2Active : styles.line}></span>
-  <span className={menuOpen ? styles.line3Active : styles.line}></span>
-</div>
+        <div
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className={menuOpen ? styles.line1Active : styles.line}></span>
+          <span className={menuOpen ? styles.line2Active : styles.line}></span>
+          <span className={menuOpen ? styles.line3Active : styles.line}></span>
+        </div>
 
-
-        <div className={`${styles.right_section} ${menuOpen ? styles.open : ""}`}>
+        <div
+          className={`${styles.right_section} ${menuOpen ? styles.open : ""}`}
+        >
           {options && (
             <>
               <Link

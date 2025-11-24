@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./layouts.module.css";
 import classNames from "classnames";
+import Sidebar from "../sidebar/Sidebar";
 
 const RightImage = ({ title, text, image, extra }) => {
   return (
@@ -87,4 +88,26 @@ const Imagen = ({ src, alt }) => {
   );
 };
 
-export { RightImage, LeftImage, MidImage, DefaultContainer, Imagen };
+const Management = ({ children }) => {
+
+  return (
+    <>
+      <main className={styles.layout}>
+        <Sidebar />
+
+        <div className={styles.content}>
+          {children}
+        </div>
+      </main>
+    </>
+  );
+};
+
+export {
+  RightImage,
+  LeftImage,
+  MidImage,
+  DefaultContainer,
+  Imagen,
+  Management,
+};

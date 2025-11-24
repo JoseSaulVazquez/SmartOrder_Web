@@ -1,67 +1,37 @@
-/* Contenedor principal */
-.menu_container {
-  position: relative;
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
-  background-color: rgba(241, 228, 209);
-  min-height: 100vh;
-}
 
-/* Logout */
-.logout_button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0.6rem 1.2rem;
-  background-color: rgb(240, 160, 80);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-  z-index: 1000;
-}
-.logout_button:hover {
-  background-color: #e69e4f;
-}
-
-/* Título */
 .title {
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
   color: rgb(250, 180, 100);
+  font-size: 2rem;
 }
 
-/* Contenedor de paneles */
+/* --- PANELES --- */
 .panels_container {
   display: flex;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
-/* Panel izquierdo: Formulario */
+/* Panel izquierdo (formulario) */
 .panel_left {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Panel derecho: Lista */
+/* Panel derecho (lista) */
 .panel_right {
   flex: 2;
   min-width: 350px;
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Formulario */
@@ -88,6 +58,7 @@
   box-sizing: border-box;
   transition: border-color 0.3s;
 }
+
 .input_field:focus {
   border-color: rgb(240, 160, 80);
   outline: none;
@@ -105,7 +76,7 @@
 
 /* Botón principal */
 .login_button {
-  padding: 0.8rem 1.5rem; 
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 6px;
   background-color: rgb(240, 160, 80);
@@ -114,11 +85,13 @@
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .login_button.tall_button {
-  padding: 1rem 1.5rem; 
-  font-size: 1rem; 
-  min-height: 48px; 
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  min-height: 48px;
 }
+
 .login_button:hover {
   background-color: #e69e4f;
 }
@@ -154,9 +127,10 @@
   justify-content: space-between;
   transition: transform 0.2s;
 }
+
 .item_card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .item_info h3 {
@@ -200,6 +174,7 @@
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .edit_button:hover {
   background-color: #e69e4f;
 }
@@ -213,6 +188,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 .delete_button:hover {
   background-color: #d32f2f;
 }

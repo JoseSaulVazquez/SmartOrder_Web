@@ -1,0 +1,201 @@
+.sidebar {
+    position: fixed;
+    /* transform: translateX(-200px); */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgb(50, 50, 50);
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: 0.3s all;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.open {
+    width: 260px;
+}
+
+.close {
+    width: 80px;
+}
+
+.close .text,
+.close .closeButton,
+.close h3 {
+    display: none;
+    opacity: 0;
+}
+
+.close .menuList li {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.close .logout_button {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.close .logout_button .icon {
+    padding-right: 0;
+    font-size: 1.2rem;
+}
+
+
+.title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid #2d3748;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.imageContainer {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    background-color: #2d3748;
+    /* Fondo circular para el logo */
+    border-radius: 50%;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.title h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #fff, #a0aec0);
+    /* Efecto de gradiente sutil en el texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.closeButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 7px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    background: rgb(150, 150, 150);
+}
+
+
+.menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.menuList {
+    list-style: none;
+    padding: 1.5rem 1rem;
+    margin: 0;
+}
+
+.menuList li {
+    height: 25px;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    color: #a0aec0;
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+/* Efecto Hover en los ítems */
+.menuList li:hover {
+    background-color: #2d3748;
+    /* Fondo más claro al pasar el mouse */
+    color: #ffffff;
+    /* Texto blanco brillante */
+    transform: translateX(5px);
+    /* Pequeño desplazamiento a la derecha */
+}
+
+.menuList li:hover :not(.open) .sidebar.open {
+    width: 280px;
+}
+
+/* (Opcional) Si tuvieras una clase para el ítem activo, se vería así:
+.menuList li.active {
+    background-color: #3182ce;
+    color: white;
+} */
+
+
+/* --- Footer (Cerrar sesión y Copyright) --- */
+/* Seleccionamos el div que contiene el botón y el párrafo al final del menú */
+.menu>div:last-child {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fondo ligeramente más oscuro para el footer */
+}
+
+.logout_button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: 2px solid #e53e3e;
+    /* Borde rojo para acción de "peligro" */
+    color: #e53e3e;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.logout_button:hover {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.menu p {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    color: #718096;
+    /* Texto muy sutil para el copyright */
+    text-align: center;
+}

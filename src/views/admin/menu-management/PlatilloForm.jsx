@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import styles from "./Session.module.css";
+import styles from "./menuManagement.module.css";
 
 const categorias = ["Desayunos", "Comidas", "Entradas", "Postres", "Bebidas"];
 

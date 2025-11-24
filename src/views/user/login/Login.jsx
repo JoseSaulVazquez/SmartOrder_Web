@@ -11,7 +11,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-// En Login.jsx, modifica la función handleLogin
+
 const handleLogin = (e) => {
   e.preventDefault();
 
@@ -21,6 +21,8 @@ const handleLogin = (e) => {
     remember: remember,
   };
 
+  console.log("SI ingresan w");
+  
   const success = login(formData);
 
   if (success) {

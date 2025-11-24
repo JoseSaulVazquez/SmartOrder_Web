@@ -1,5 +1,5 @@
 import axios from "axios";
-const URI = "http://localhost:5102";
+const URI = "https://smartorder-team-back.onrender.com";
 
 async function sing_in(data) {
   try {
@@ -17,7 +17,7 @@ async function login(data) {
   //   const data = data;
 
   try {
-    const response = await axios.post(`${URI}/login`, data);
+    const response = await axios.post(`${URI}/api/login`, data);
     console.log(response.data);
 
     localStorage.setItem("token", response.data.token);
