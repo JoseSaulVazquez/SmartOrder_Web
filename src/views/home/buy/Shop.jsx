@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import { PriceCard } from "../../../components/cards/Cards";
 import { packs } from "../../../utils/packs";
 import classNames from "classnames";
+import bg from "../../../assets/varios/shop_bg.jpg";
 
 import google from "././../../../assets/varios/google-store.png";
 import windows from "././../../../assets/varios/windows-store.png";
 import apple from "././../../../assets/varios/apple-store.png";
+import aptoide from "././../../../assets/varios/aptoide.jpg";
 import { RightImage } from "../../../components/layouts/Layouts";
 
 function Shop() {
@@ -36,11 +38,11 @@ function Shop() {
       <Navbar />
 
       <main className="bg_container">
-        <div className={styles.background}>
+        <div className={styles.background} style={{ backgroundImage: `url(${bg})` }}>
           <div className={styles.opacity}>
             <div className={styles.subContainer}>
               <h1 className={classNames(styles.app, styles.title)}>
-                smartOrder <span>v0.01 {platform}</span>
+                smartOrder
               </h1>
               <div
                 className={classNames(
@@ -48,21 +50,16 @@ function Shop() {
                   styles.mbottom
                 )}
               >
+                
                 <button className={styles.platform}>
-                  <img src={windows} alt="windows store" />
-                </button>
-                <button className={styles.platform}>
-                  <img src={google} alt="google play" />
-                </button>
-                <button className={styles.platform}>
-                  <img src={apple} alt="apple store" />
+                  <img src={aptoide} alt="aptoide" />
                 </button>
               </div>
 
               <div className={styles.horizonralContainer}>
                 <Link
                   className={classNames(styles.button, styles.download)}
-                  to="/download"
+                  to="https://es.aptoide.com/"
                   target="_blank"
                 >
                   <div>

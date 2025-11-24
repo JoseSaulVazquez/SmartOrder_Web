@@ -75,3 +75,32 @@
   aspect-ratio: 0;
   border-radius: 8px;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .image {
+    display: none !important;
+  }
+
+  /* Para que el contenido se adapte */
+  .info {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Para que el layout no deje espacios vacíos */
+  .container {
+    flex-direction: column !important;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Asegurar que el texto quede centrado en App.jsx */
+  .horizontal {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+

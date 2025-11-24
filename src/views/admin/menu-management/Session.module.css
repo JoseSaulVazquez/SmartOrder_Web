@@ -1,32 +1,129 @@
-/* Estilos adicionales para MenuManagement */
+/* Contenedor principal */
+.menu_container {
+  position: relative;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  background-color: rgba(241, 228, 209);
+  min-height: 100vh;
+}
+
+/* Logout */
+.logout_button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  background-color: rgb(240, 160, 80);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+.logout_button:hover {
+  background-color: #e69e4f;
+}
+
+/* Título */
 .title {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: rgb(250, 180, 100);
 }
 
-.section_form, .section_list {
-  background: white;
+/* Contenedor de paneles */
+.panels_container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+/* Panel izquierdo: Formulario */
+.panel_left {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* Panel derecho: Lista */
+.panel_right {
+  flex: 2;
+  min-width: 350px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Formulario */
 .platillo_form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  color: #333;
+  gap: 1.2rem;
 }
 
-.select {
-  padding: 0.8rem;
+.input_group label {
+  font-weight: bold;
+  color: #502314;
+  margin-bottom: 0.5rem;
+}
+
+.input_field {
+  padding: 0.8rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
+  background-color: #ccc;
+  font-size: 1rem;
+  color: #502314;
   width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+.input_field:focus {
+  border-color: rgb(240, 160, 80);
+  outline: none;
 }
 
+/* Select */
+.select {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #ccc;
+  color: #502314;
+}
+
+/* Botón principal */
+.login_button {
+  padding: 0.8rem 1.5rem; 
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(240, 160, 80);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login_button.tall_button {
+  padding: 1rem 1.5rem; 
+  font-size: 1rem; 
+  min-height: 48px; 
+}
+.login_button:hover {
+  background-color: #e69e4f;
+}
+
+/* Lista de platillos */
 .platillo_list {
   margin-top: 2rem;
 }
@@ -43,28 +140,34 @@
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  
-}
-
-.item_card {
-  background: rgb(211, 211, 210);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
 }
 
-.item_info {
-  flex-grow: 1;
+.item_card {
+  background-color: rgb(240, 160, 80, 0.1);
+  border-left: 6px solid rgb(240, 160, 80);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s;
+}
+.item_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.item_actions {
-  display: flex;
-  gap: 0.5rem;
+.item_info h3 {
+  margin: 0;
+  color: #502314;
+}
+
+.item_info p {
+  margin: 0.3rem 0;
+  font-weight: bold;
+  color: #333;
 }
 
 .category_badge {
@@ -75,98 +178,41 @@
   display: inline-block;
 }
 
-.nomPlatillo{
-    color: rgb(255, 255, 255);
-    background: #333;
-    text-align: center;
+.nomPlatillo {
+  color: rgb(255, 255, 255);
+  background: #333;
+  text-align: center;
+}
+
+.item_actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .edit_button {
-  background: #4CAF50;
-  color: white;
-}
-
-.delete_button {
-  background: #f44336;
-  color: white;
-}
-
-.login_button {
-  padding: 0.8rem 1.5rem; 
+  flex: 1;
+  background-color: rgb(240, 160, 80);
   border: none;
-  border-radius: 4px;
-  background-color: #7c7c7c; 
+  border-radius: 6px;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background 0.3s;
+}
+.edit_button:hover {
+  background-color: #e69e4f;
 }
 
-/* Estilo para hacerlo más alto */
-.tall_button {
-  padding: 1rem 1.5rem; 
-  font-size: 1rem; 
-  min-height: 48px; 
-}
-
-.login_button:hover {
-  background-color: #464646; 
-}
-
-
-.input_group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.2rem; /* Espacio entre grupos */
-  width: 100%; /* Asegura que ocupen todo el ancho */
-}
-
-.input_field {
-  padding: 0.8rem 1rem 0.8rem 1.5rem; /* Más padding a la izquierda */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
-}
-
-.input_field:focus {
-  border-color: #686868;
-  outline: none;
-}
-
-label {
-  font-weight: 500;
-  color: #555;
-  margin-left: 0.5rem; /* Mueve el label un poco a la derecha */
-}
-
-/* Estilo para el botón de cerrar sesión */
-.logout_button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+.delete_button {
+  flex: 1;
   background-color: #f44336;
-  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-  z-index: 1000;
 }
-
-.logout_button:hover {
+.delete_button:hover {
   background-color: #d32f2f;
-}
-
-/* Asegúrate que el contenedor principal tenga posición relativa */
-.login_container {
-  position: relative;
 }

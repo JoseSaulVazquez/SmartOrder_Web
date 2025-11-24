@@ -1,8 +1,8 @@
 import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./Session.module.css";
+import styles from "./session.module.css";
 import logo from "./../../../assets/Logo.png";
-import restaurante from "./../../../assets/varios/restaurante.jpg";
+import restaurante from "./../../../assets/varios/Restaurante.jpg";
 import { sing_in } from "../../../utils/Users";
 
 function Sing_in() {
@@ -83,7 +83,7 @@ function Sing_in() {
       <div className={styles.login_left}>
         <div className={styles.sing_form}>
           <img src={logo} alt="Logo" className={styles.login_logo} />
-          <h2>Regsitrar</h2>
+          <h2>Registrar</h2>
           <form onSubmit={regsiter}>
             {step === 0 && (
               <div className={styles.inputs_group}>

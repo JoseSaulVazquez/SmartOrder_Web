@@ -62,3 +62,39 @@
     max-width: 150px;
     height: auto;
   }
+
+@media screen and (max-width: 768px) {
+
+  .bg_container {
+    padding-top: 120px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: auto;
+  }
+
+  .background {
+    padding: 20px !important;
+    margin-top: 100px !important;
+    width: 95% !important;
+  }
+
+  .subContainer h1 {
+    font-size: 24px !important;
+  }
+
+  .subContainer p {
+    font-size: 1rem !important;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .img {
+    max-width: 120px !important;
+  }
+
+  .mapContainer {
+    width: 90% !important;
+    height: 250px !important;
+    border-radius: 10px !important;
+  }
+}

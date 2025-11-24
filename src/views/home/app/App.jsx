@@ -30,12 +30,7 @@ function App() {
                 Nuestra app está diseñada para agilizar la toma de pedidos en
                 restaurantes de manera sencilla e intuitiva.
               </p>
-
-              <Link className={fatherStyles.button} to="/smartOrder/menu">
-                <div>
-                  <span>SIMULAR PEDIDO</span>
-                </div>
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -46,7 +41,7 @@ function App() {
               <div className={styles.horizontal}>
                 <div className={styles.info}>
                   <h3 className={styles.secondTitle}>
-                    Accesible en cualquier lugar.
+                    Accesible en cualquier lugar
                   </h3>
 
                   <p>
@@ -73,7 +68,7 @@ function App() {
                 </div>
 
                 <div className={styles.info}>
-                  <h3 className={styles.secondTitle}>
+                  <h3 className={styles.secondTitle2}>
                     Una experiencia más ágil
                   </h3>
 
@@ -93,7 +88,7 @@ function App() {
             <DefaultContainer>
               <div className={styles.horizontal}>
                 <div className={styles.info}>
-                  <h3 className={styles.secondTitle}>
+                  <h3 className={styles.secondTitle3}>
                     Un menú interactivo y personalizable
                   </h3>
 

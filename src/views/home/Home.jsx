@@ -37,7 +37,7 @@ function Home() {
             </span>
             <Link
               className={classNames(styles.imagebutton, styles.mtop)}
-              to="/smartOrder/menu"
+              to="/Help"
             >
               CONOCER MÁS
             </Link>
@@ -140,27 +140,16 @@ function Home() {
               title="Descarga nuestra App Móvil"
               extra={
                 <div className={styles.verticalContainer}>
-                  <span className={styles.detailText}>
-                    Disponible Proximaemente
-                  </span>
                   <Link
                     className={classNames(
                       styles.button,
                       styles.mtop,
                       styles.noButton
                     )}
-                    // to="/smartOrder/menu"
+                     to="https://es.aptoide.com/"
                   >
                     <div>
                       <span>DESCARGAR</span>
-                    </div>
-                  </Link>
-                  <Link
-                    className={classNames(styles.button, styles.mtop)}
-                    to="/smartOrder/menu"
-                  >
-                    <div>
-                      <span>SIMULAR PEDIDO</span>
                     </div>
                   </Link>
                 </div>

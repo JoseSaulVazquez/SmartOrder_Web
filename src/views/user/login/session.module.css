@@ -154,41 +154,6 @@ h2 {
   width: 88.5%;
 }
 
-/* .sing_form {
-  width: 100%;
-  max-width: 350px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.input_group label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.input_group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.inputmid_group {
-  display: flex;
-  gap: 10px;
-}
-
-.inputmid_group .input_group {
-  flex: 1;
-}
- */
 
 .button_group {
   display: flex;
@@ -196,3 +161,95 @@ h2 {
   justify-content: space-between;
   gap: 20px;
 }
+
+/* 📱📱📱 — RESPONSIVE PARA MÓVILES */
+@media screen and (max-width: 768px) {
+  
+  /* Contenedor principal */
+  .login_container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px;
+    align-items: center !important;
+    justify-content: start !important;
+  }
+
+  /* Botón de regresar */
+  .back_button {
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+  }
+
+  /* Sección izquierda ocupa todo y centran el contenido */
+  .login_left {
+    width: 100% !important;
+    min-height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Centrado absoluto del form */
+  .login_container,
+  .login_left,
+  .login_form {
+    margin: 0 auto !important;
+  }
+
+  /* Ajustes de tamaños */
+  .login_form,
+  .sing_form {
+    width: 70% !important;
+    max-width: 70% !important;
+    padding: 25px !important;
+  }
+
+  .login_logo {
+    width: 90px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  .input_group label {
+    font-size: 15px;
+  }
+
+  .input_group input {
+    width: 95% !important;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* Inputs dobles del registro en columna */
+
+
+  .inputmid_group input {
+    width: 90% !important;
+  }
+
+  /* Botones en columna */
+  .button_group {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+
+  .login_button {
+    width: 100% !important;
+    font-size: 16px;
+  }
+
+  /* Ocultar imagen */
+  .login_right {
+    display: none !important;
+  }
+
+  .login_image {
+    display: none !important;
+  }
+}
+

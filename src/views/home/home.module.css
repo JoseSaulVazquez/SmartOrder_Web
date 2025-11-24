@@ -1,3 +1,6 @@
+/* =========================
+   ESTILOS ORIGINALES
+   ========================= */
 
 .imageBG {
   position: fixed;
@@ -28,19 +31,12 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  /* Espacio entre el logo y el botón */
-}
-
-.subContainer h1 {
-  color: rgb(255, 255, 255);
 }
 
 .centerImg {
   margin: 30px auto 20px auto;
   width: 200px;
-  /* Ajusta el tamaño de la imagen */
   height: 200px;
-  /* Ajusta la altura */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +65,6 @@
 .button div {
   padding: 10px 0px;
   width: 100%;
-  /* height: 100%; */
   background: linear-gradient(to right, transparent, rgb(250, 250, 250, 0.3), transparent);
   border: 2px solid var(--color);
 }
@@ -84,6 +79,7 @@
   transform: scale(1.03);
 }
 
+/* Containers */
 .container {
   width: 100%;
   min-height: 100vh;
@@ -95,7 +91,6 @@
 }
 
 .second {
-  /* background: var(--bg-color3); */
   background: linear-gradient(to left, var(--bg-color3), var(--detail2));
 }
 
@@ -106,6 +101,7 @@
   justify-content: center;
 }
 
+/* Separators */
 .separator {
   padding: 30px;
   display: flex;
@@ -124,22 +120,18 @@
 .separator2 {
   padding: 30px 0px;
   width: 100%;
-  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: transparent;
 }
 
 .separator2 h3 {
   margin-bottom: 10px;
-  width: 100%;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: var(--color);
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0, 0.3));
 }
 
 .separator2 span {
@@ -148,20 +140,14 @@
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  /* color: rgb(238, 212, 173); */
   color: var(--detail1);
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0, 0.3));
 }
 
-.mtop {
-  margin-top: 30px;
-}
-
+/* Titles */
 .title {
   margin: 0;
   font-size: 40px;
   font-weight: bold;
-  /* color: rgb(255, 255, 255); */
 }
 
 .subtitle {
@@ -208,15 +194,9 @@
 }
 
 .secondTitle {
-  position: relative;
   margin: 0;
   font-size: 40px;
-  color: rgb(255, 255, 255);
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0, 0.3));
-  /* font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase; */
+  color: white;
 }
 
 .secondTitle::after {
@@ -231,7 +211,6 @@
 .list {
   list-style: none;
   padding: 0;
-  text-align: left;
 }
 
 .list li {
@@ -247,7 +226,6 @@
 }
 
 .imageContainer {
-  margin-right: 20px;
   width: 38%;
   display: flex;
   align-items: center;
@@ -256,7 +234,6 @@
 
 .detailText {
   color: var(--color);
-  filter: drop-shadow(0 0 5px rgb(0, 0, 0, 0.3));
 }
 
 .noButton {
@@ -267,27 +244,138 @@
   background: rgb(220, 140, 60);
 }
 
-.separator p {
-  color: var(--color);
+
+/* =========================
+   📱 RESPONSIVE — TABLET
+   ========================= */
+@media screen and (max-width: 1024px) {
+
+  .section_container {
+    width: 90%;
+  }
+
+  .secondTitle {
+    font-size: 32px;
+  }
+
+  .horizontalContainer {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .imageContainer {
+    width: 50%;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .imagebutton {
+    font-size: 20px;
+  }
 }
 
+
+/* =========================
+   📱 RESPONSIVE — MÓVIL (principal)
+   ========================= */
 @media screen and (max-width: 768px) {
-  .horizontalContainer {
-    flex-direction: column;
+
+  .centerImg {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .imagebutton {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .separator div {
+    width: 100%;
+  }
+
+  .separator2 span {
+    width: 85%;
+    font-size: 18px;
   }
 
   .horizontalContainer {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 
-  .right_section {
-    order: 2;
+  .imageContainer {
+    width: 70%;
+    margin: 0;
   }
 
-  .left_section {
-    order: 1;
+  .list li {
+    font-size: 16px;
   }
+
+  .secondTitle {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================
+   📱 RESPONSIVE — MÓVIL PEQUEÑO
+   ========================= */
+@media screen and (max-width: 480px) {
+  
+  .centerImg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .imagebutton {
+    font-size: 16px;
+  }
+
+  .list li {
+    font-size: 14px;
+  }
+
+  .separator2 h3 {
+    font-size: 24px;
+  }
+
+  .secondTitle {
+    font-size: 24px;
+  }
+
+  .horizontalContainer {
+    width: 100%;
+  }
+
+  .section_container {
+    width: 95%;
+  }
+
   
 }

@@ -3,7 +3,7 @@ const URI = "http://localhost:5102";
 
 async function sing_in(data) {
   try {
-    const response = await axios.post(URI + "/register", data);
+    const response = await axios.post(URI + "/api/signIn", data);
     console.log(response.data);
     alert("Usuario registrado con éxito");
     window.location.reload();

@@ -4,7 +4,7 @@ import styles from "./nav.module.css";
 import classNames from "classnames";
 import Logo from "../../assets/Logo.png";
 import { userData } from "../../utils/Users";
-import { Menu } from "../menu/Menu";
+
 
 function Navbar() {
   const location = useLocation().pathname;
@@ -83,17 +83,8 @@ function Navbar() {
         }
       )}
     >
-      <Menu open={menuOpen} setOpen={setMenuOpen} />
       <nav className={styles.navbar}>
         <div className={styles.left_section}>
-          <span
-            className={`material-symbols-outlined ${
-              options ? styles.homeLink : styles.smartOrder_Link
-            }`}
-            onClick={() => setMenuOpen(true)}
-          >
-            menu
-          </span>
 
           <Link className={styles.logo} to="/">
             {!(location === "/") && <img src={Logo} alt="smartOrder Logo" />}
@@ -105,7 +96,15 @@ function Navbar() {
           {/* <h1 className={styles.title}>PEDIDO</h1> */}
         </div>
 
-        <div className={styles.right_section}>
+        {/* BOTÓN HAMBURGUESA SOLO MÓVIL */}
+<div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
+  <span className={menuOpen ? styles.line1Active : styles.line}></span>
+  <span className={menuOpen ? styles.line2Active : styles.line}></span>
+  <span className={menuOpen ? styles.line3Active : styles.line}></span>
+</div>
+
+
+        <div className={`${styles.right_section} ${menuOpen ? styles.open : ""}`}>
           {options && (
             <>
               <Link
