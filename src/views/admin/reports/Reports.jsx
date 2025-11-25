@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer/Footer";
-import styles from "./Users.module.css";
+import styles from "./Reports.module.css";
 import { Management } from "../../../components/layouts/Layouts";
 import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 import { userData } from "../../../utils/Users";
 
-function Orders() {
+function Reports() {
   const [user, setUser] = useState();
   const token = localStorage.getItem("token");
 
@@ -37,9 +37,14 @@ function Orders() {
       <NavbarAdmin />
 
       <Management>
-        <h1 className={styles.title}>Usuarios</h1>
+        <h1 className={styles.title}>
+          Reportes y estadisticas
+        </h1>
+        <p className={styles.subText}>Aquí podras ver un reporte y estadisticas de tu(s) restaurante(s)</p>
 
-        <div className={styles.content}></div>
+        <div className={styles.content}>
+          
+        </div>
       </Management>
 
       <Footer />
@@ -47,4 +52,4 @@ function Orders() {
   );
 }
 
-export default Orders;
+export default Reports;

@@ -14,14 +14,11 @@ import Help from "./views/home/help/Help.jsx";
 import Cart from "./views/home/cart/Cart.jsx";
 
 import User from "./views/admin/user/User.jsx";
-import Users from "./views/admin/users/Users.jsx";
 import Edit_User from "./views/admin/users/Edit_User.jsx";
 
 import Category from "./views/admin/categorys/Category.jsx";
 import Categorys from "./views/admin/categorys/Categorys.jsx";
 import Edit_Category from "./views/admin/categorys/Edit_Category.jsx";
-
-
 
 import Login from "./views/user/login/Login.jsx";
 import Sing_in from "./views/user/login/Sing_in.jsx";
@@ -37,7 +34,9 @@ import Order from "./views/user/order/Order.jsx";
 import MenuManagement from "./views/admin/menu-management/MenuManagement.jsx";
 import Restaurant from "./views/admin/Restaurants/Restaurant.jsx";
 import Foods from "./views/admin/foods/Foods.jsx";
-
+import Orders from "./views/admin/orders/Orders.jsx";
+import Reports from "./views/admin/reports/Reports.jsx";
+import Users from "./views/admin/users/Users.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -66,35 +65,38 @@ createRoot(document.getElementById("root")).render(
           <Route path="/smartOrder" element={<Restaurants />} />
           <Route path="/smartOrder/menu" element={<Menu />} />
           <Route path="/smartOrder/menu/:category" element={<SubMenu />} />
-          <Route path="/smartOrder/menu/:category/:food" element={<Details />} />
+          <Route
+            path="/smartOrder/menu/:category/:food"
+            element={<Details />}
+          />
           <Route path="/smartOrder/:user/cart" element={<MenuCart />} />
           <Route path="/smartOrder/:user/order" element={<Order />} />
 
           {/* Administrador */}
-          <Route path="/users/:user" element={<User />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/users/edit-user/:user" element={<Edit_User />} />
-
-          <Route path="/categorys/:category" element={<Category />} />
-          <Route path="/categorys" element={<Categorys />} />
-          <Route path="/categorys/edit-category/:category" element={<Edit_Category />} />
-
-          <Route path="/foods" element={<Foods />} />
-
-          <Route path="/404" element={<Foods />} />
-
           <Route path="/admin/menu-management" element={<MenuManagement />} />
           <Route path="/admin/restaurants" element={<Restaurant />} />
           <Route path="/admin/foods" element={<Foods />} />
+          <Route path="/admin/orders" element={<Orders />} />
+          <Route path="/admin/reports" element={<Reports />} />
+          <Route path="/admin/users" element={<Users />} />
+          <Route path="/categorys" element={<Categorys />} />
 
+          <Route path="/admin/users/:user" element={<User />} />
+          <Route path="/admin/users/edit-user/:user" element={<Edit_User />} />
 
+          <Route path="/admin/categorys/:category" element={<Category />} />
+          <Route
+            path="/admin/categorys/edit-category/:category"
+            element={<Edit_Category />}
+          />
 
+          {/* No found */}
+          <Route path="/404" element={<Foods />} />
         </Routes>
       </Layout>
     </BrowserRouter>
   </StrictMode>
 );
 
-
-import { registerSW } from 'virtual:pwa-register'
-registerSW({ immediate: true })
+import { registerSW } from "virtual:pwa-register";
+registerSW({ immediate: true });

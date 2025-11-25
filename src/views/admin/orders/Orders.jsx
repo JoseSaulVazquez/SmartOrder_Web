@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer/Footer";
-import styles from "./Users.module.css";
+import styles from "./Orders.module.css";
 import { Management } from "../../../components/layouts/Layouts";
 import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 import { userData } from "../../../utils/Users";
@@ -37,9 +37,13 @@ function Orders() {
       <NavbarAdmin />
 
       <Management>
-        <h1 className={styles.title}>Usuarios</h1>
-
-        <div className={styles.content}></div>
+        <h1 className={styles.title}>
+          Ordenes de tus restaurantes
+        </h1>
+    
+        <div className={styles.content}>
+          
+        </div>
       </Management>
 
       <Footer />
