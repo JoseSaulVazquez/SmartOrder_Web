@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./sidebar.module.css";
+import styles from "./Sidebar.module.css";
 import Logo from "../../assets/Logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
