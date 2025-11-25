@@ -18,7 +18,8 @@ async function login(data) {
     const response = await axios.post(`${URI}/api/login`, data);
 
     localStorage.setItem("token", response.data.token);
-    localStorage.setItem("role", response.data.rol);
+    localStorage.setItem("role", response.data.user_role);
+
     return true;
   } catch (error) {
     console.error("Error en el login:", error.response?.data || error.message);
@@ -27,7 +28,6 @@ async function login(data) {
 }
 
 async function userData(token) {
-  
   try {
     const response = await axios.get(`${URI}/auth/userData`, {
       headers: {
@@ -42,10 +42,19 @@ async function userData(token) {
   }
 }
 
-async function users() {
-  const data = data;
+async function getUsers(token) {
+  try {
+    const response = await axios.get(`${URI}/auth/get-All-User`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
 
-  axios.post(URI + "/login", { data });
+    return response.data.data;
+  } catch (error) {
+    console.error("Error en el login:", error.response?.data || error.message);
+    return false;
+  }
 }
 
-export { sing_in, login, userData, users };
+export { sing_in, login, userData, getUsers };

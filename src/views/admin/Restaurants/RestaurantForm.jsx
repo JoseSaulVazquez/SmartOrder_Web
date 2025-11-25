@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./RestaurantForm.module.css"; // Asumiendo que crearás un CSS para el form
+import styles from "./Restaurant.module.css"; // Asumiendo que crearás un CSS para el form
 
 const RestaurantForm = ({ onClose, onSuccess }) => {
   const [loading, setLoading] = useState(false);

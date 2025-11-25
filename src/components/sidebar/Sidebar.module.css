@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(var(--cardTableColor));
     color: #e2e8f0;
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    background: linear-gradient(90deg, #fff, #a0aec0);
+    background: linear-gradient(90deg, rgb(var(--tableTitle)), rgb(255, 0, 0));
     /* Efecto de gradiente sutil en el texto */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -141,7 +141,7 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    color: #a0aec0;
+    color: #000000;
 }
 
 .icon {
@@ -150,40 +150,26 @@
 
 /* Efecto Hover en los ítems */
 .menuList li:hover {
-    background-color: #2d3748;
-    /* Fondo más claro al pasar el mouse */
-    color: #ffffff;
-    /* Texto blanco brillante */
+    background-color: rgb(50, 50, 50);
+    color: rgb(255, 255, 255);
     transform: translateX(5px);
-    /* Pequeño desplazamiento a la derecha */
 }
 
 .menuList li:hover :not(.open) .sidebar.open {
     width: 280px;
 }
 
-/* (Opcional) Si tuvieras una clase para el ítem activo, se vería así:
-.menuList li.active {
-    background-color: #3182ce;
-    color: white;
-} */
-
-
-/* --- Footer (Cerrar sesión y Copyright) --- */
-/* Seleccionamos el div que contiene el botón y el párrafo al final del menú */
 .menu>div:last-child {
     padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Fondo ligeramente más oscuro para el footer */
+    background-color: rgba(50, 50, 50);
 }
 
 .logout_button {
     width: 100%;
     padding: 0.75rem;
     background-color: transparent;
-    border: 2px solid #e53e3e;
-    /* Borde rojo para acción de "peligro" */
-    color: #e53e3e;
+    border: 2px solid rgb(222, 55, 55);
+    color: rgb(222, 55, 55);
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -194,12 +180,4 @@
 .logout_button:hover {
     background-color: #e53e3e;
     color: white;
-}
-
-.menu p {
-    margin-top: 1rem;
-    font-size: 0.7rem;
-    color: #718096;
-    /* Texto muy sutil para el copyright */
-    text-align: center;
 }

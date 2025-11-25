@@ -1,59 +1,101 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Restaurant.module.css";
 import { Management } from "../../../components/layouts/Layouts";
 import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 import Footer from "../../../components/footer/Footer";
+import RestaurantForm from "./RestaurantForm";
+import { getMyRestaurants } from "../../../utils/restaurants";
+import { Link } from "react-router-dom";
 
 function Restaurant() {
-  const storedUser = localStorage.getItem("userData");
-  const user = storedUser ? JSON.parse(storedUser) : {};
-  const Role = user.role;
+  const token = localStorage.getItem("token");
+  const [user, setUser] = useState();
+  const [restaurants, setRestaurants] = useState();
 
   // 2. Estado para controlar la visibilidad del formulario
   const [showForm, setShowForm] = useState(false);
 
-  // Función para recargar la lista después de crear (puedes implementarla luego)
-  const handleRefreshList = () => {
-    console.log("Refrescando lista de restaurantes...");
-    // Aquí harías un fetch para obtener los restaurantes actualizados
-  };
+  useEffect(() => {
+    const fetchRest = async () => {
+      try {
+        if (!token) return;
+
+        const data = await getMyRestaurants(token);
+        if (data) {
+          setRestaurants(data);
+          console.log(data);
+        }
+      } catch (error) {
+        console.log("Error inesperado:", error);
+      }
+    };
+
+    fetchRest();
+  }, [token]);
 
   return (
     <>
       <NavbarAdmin />
 
       <Management>
-        <div>
-          <div className={styles.header_container}>
-            <h1 className={styles.title}>
-              {Role ? "Mi restaurante" : "Mis restaurantes"}
-            </h1>
+        <h1 className={styles.title}>Mi(s) restaurantes</h1>
+        <p className={styles.subText}>
+          Aquí podras ver tu restaurante y acomodar los menus
+        </p>
 
-            {/* Botón para abrir el formulario */}
-            <button
-              className={styles.createButton}
-              onClick={() => setShowForm(!showForm)}
-            >
-              {showForm ? "Cerrar Formulario" : "+ Nuevo Restaurante"}
-            </button>
-          </div>
+        <div className={styles.content}>
+          <section className={styles.card}>
+            <div className={styles.cardHeader}>
+              <h2 className={styles.cardTitle}>Listado de restaurantes</h2>
 
-          <div className={styles.panels_container}>
-            {/* Renderizado condicional del formulario */}
-            {showForm && (
-              <div className={styles.formWrapper}>
-                <RestaurantForm
-                  onClose={() => setShowForm(false)}
-                  onSuccess={handleRefreshList}
-                />
-              </div>
-            )}
-          </div>
+              <Link to="" className={styles.cardAddItem}>
+                Añadir restaurante
+              </Link>
+            </div>
 
-          <div className={styles.restaurant_list}>
-            {/* Aquí iría tu .map() de restaurantes existentes */}
-            <p>Lista de restaurantes...</p>
-          </div>
+            <div className={styles.tableContainer}>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                    <th>categoria</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {restaurants && restaurants.length > 0 ? (
+                    restaurants.map((rest, i) => (
+                      <tr key={i}>
+                        <td>{rest.name}</td>
+                        <td>{rest.description}</td>
+                        <td>{rest.date?.date || "-"}</td>
+                        <td>{rest.category?.join(", ") || "-"}</td>
+                        <td>{rest.status || "Activo"}</td>
+                        <td className={styles.buttons}>
+                          <button className={styles.actionBtn}>
+                            <i className="fa-solid fa-pen-to-square"></i>
+                          </button>
+                          <button className={styles.actionBtnDelete}>
+                            <i className="fa-solid fa-trash-can"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="7" className={styles.emptyData}>
+                        No hay registros para mostrar
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </section>
         </div>
       </Management>
 

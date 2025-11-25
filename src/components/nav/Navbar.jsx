@@ -170,7 +170,7 @@ function Navbar() {
                 </Link>
               )}
               {user && (
-                <Link to="/login" className={styles.homeLink}>
+                <Link to={`/profile/${user.name.name}`} className={styles.homeLink}>
                   {user.name.name}
                 </Link>
               )}

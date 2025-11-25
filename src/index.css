@@ -122,6 +122,11 @@ button:focus-visible {
     --detail1: rgb(80, 35, 20);
     --detail2: rgb(240, 160, 80);
     --detail3: rgb(250, 180, 100);
+
+    --cardTableColor: 250, 245, 240;
+    --tableTitle: 0,0,0;
+    --tableColor: 255, 250, 250;
+    --tableTr: 180, 170, 170;
   }
 }
 

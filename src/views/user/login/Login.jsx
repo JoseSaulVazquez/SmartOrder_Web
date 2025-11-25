@@ -23,7 +23,16 @@ function Login() {
     const success = await login(formData);
 
     if (success) {
-      navigator("/admin/menu-management");
+      const role = localStorage.getItem("role");
+
+      console.log(role);
+
+      if (role < 4) {
+        navigator("/admin/menu-management");
+      } else {
+        
+        navigator("/");
+      }
     } else {
       alert("Credenciales incorrectas");
     }
