@@ -21,7 +21,7 @@ import Category from "./views/admin/categorys/Category.jsx";
 import Categorys from "./views/admin/categorys/Categorys.jsx";
 import Edit_Category from "./views/admin/categorys/Edit_Category.jsx";
 
-import Foods from "./views/admin/foods/Foods.jsx";
+
 
 import Login from "./views/user/login/Login.jsx";
 import Sing_in from "./views/user/login/Sing_in.jsx";
@@ -36,6 +36,7 @@ import Order from "./views/user/order/Order.jsx";
 
 import MenuManagement from "./views/admin/menu-management/MenuManagement.jsx";
 import Restaurant from "./views/admin/Restaurants/Restaurant.jsx";
+import Foods from "./views/admin/foods/Foods.jsx";
 
 
 createRoot(document.getElementById("root")).render(
@@ -84,6 +85,7 @@ createRoot(document.getElementById("root")).render(
 
           <Route path="/admin/menu-management" element={<MenuManagement />} />
           <Route path="/admin/restaurants" element={<Restaurant />} />
+          <Route path="/admin/foods" element={<Foods />} />
 
 
 

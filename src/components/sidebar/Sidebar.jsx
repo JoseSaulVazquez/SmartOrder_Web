@@ -76,7 +76,7 @@ function Sidebar({ setSidebarOpen }) {
               <span className={styles.text}>Gestión de Menús</span>
             </li>
           </Link> */}
-          <Link to="/admin/restaurants" className={styles.a}>
+          <Link to="/admin/foods" className={styles.a}>
             <li title="Pedidos">
               <span className={styles.icon}>
                 <i className="fa-solid fa-burger"></i>
