@@ -61,6 +61,12 @@ function Sidebar() {
             </span>
             <span className={styles.text}>Gestión de Menús</span>
           </li>
+          <li title="Menús">
+            <span className={styles.icon}>
+              <i className="fa-solid fa-box"></i>
+            </span>
+            <span className={styles.text}>Alimentos</span>
+          </li>
           <li title="Pedidos">
             <span className={styles.icon}>
               <i className="fa-solid fa-list"></i>

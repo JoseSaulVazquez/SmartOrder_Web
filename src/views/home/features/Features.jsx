@@ -20,7 +20,7 @@ function Features() {
 
           <div className={styles.featureCard}>
             <h2>Compatibilidad con Dispositivos</h2>
-            <p>Funciona en smartwatch, smartTV, móviles y asistentes de voz para una experiencia integral.</p>
+            <p>Funciona en dispositivos móviles Android.</p>
           </div>
 
           <div className={styles.featureCard}>
@@ -30,7 +30,7 @@ function Features() {
 
           <div className={styles.featureCard}>
             <h2>Integración con Pagos Digitales</h2>
-            <p>Facilita los pagos con tarjetas, billeteras electrónicas y códigos QR.</p>
+            <p>Facilita los pagos mediante PayPal.</p>
           </div>
 
           <div className={styles.featureCard}>
