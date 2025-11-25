@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Foods.module.css";
+import styles from "./foods.module.css";
 import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 import { Management } from "../../../components/layouts/Layouts";
 import Footer from "../../../components/footer/Footer";
