@@ -55,12 +55,12 @@ function Sidebar() {
             </span>
             <span className={styles.text}>Mis Restaurantes</span>
           </li>
-          <li title="Gestión de Menús">
+          {/* <li title="Gestión de Menús">
             <span className={styles.icon}>
               <i className="fa-solid fa-box"></i>
             </span>
             <span className={styles.text}>Gestión de Menús</span>
-          </li>
+          </li> */}
           <li title="Menús">
             <span className={styles.icon}>
               <i className="fa-solid fa-box"></i>
@@ -73,12 +73,12 @@ function Sidebar() {
             </span>
             <span className={styles.text}>Pedidos</span>
           </li>
-          <li title="Configuración">
+          {/* <li title="Configuración">
             <span className={styles.icon}>
               <i className="fa-solid fa-gear"></i>
             </span>
             <span className={styles.text}>Configuración</span>
-          </li>
+          </li> */}
           <li title="Reportes">
             <span className={styles.icon}>
               <i className="fa-solid fa-file"></i>

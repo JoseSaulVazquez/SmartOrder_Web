@@ -7,6 +7,7 @@ import styles from "./menuManagement.module.css";
 import Navbar from "../../../components/nav/Navbar";
 import Sidebar from "../../../components/sidebar/Sidebar";
 import { Management } from "../../../components/layouts/Layouts";
+import DashboardCard from "../../../components/dashboardsmain/DashboardItem";
 
 function MenuManagement() {
   const [editar, setEditar] = useState(null);
@@ -20,7 +21,28 @@ function MenuManagement() {
 
       <Management>
         <h1 className={styles.title}>Gestión de Menú</h1>
-
+        <div className={styles.cards}>
+        <DashboardCard
+        title="Restaurantes"
+        description="Administra tus restaurantes aquí"
+        type="qwerty"
+        />
+        <DashboardCard
+        title="Restaurantes"
+        description="Administra tus restaurantes aquí"
+        type="qwerty"
+        />
+        <DashboardCard
+        title="Restaurantes"
+        description="Administra tus restaurantes aquí"
+        type="qwerty"
+        />
+        <DashboardCard
+        title="Restaurantes"
+        description="Administra tus restaurantes aquí"
+        type="qwerty"
+        />
+        </div>
         <div className={styles.panels_container}>
           <section className={styles.panel_left}>
             <h2>{editar ? "Editar Platillo" : "Agregar Nuevo Platillo"}</h2>
