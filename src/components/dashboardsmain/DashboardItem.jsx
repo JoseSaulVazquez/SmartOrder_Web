@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 
 const DashboardCard = ({ title, description, type }) => {
+  const specialStyle = type;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -12,7 +14,7 @@ const DashboardCard = ({ title, description, type }) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={classNames(styles.dashboardCard, styles[type])}
     >
-      <div className={styles.header}>
+      <div className={classNames(styles.header, styles[type])}>
         <h3>{title}</h3>
       </div>
 

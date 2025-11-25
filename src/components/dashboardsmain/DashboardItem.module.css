@@ -1,15 +1,21 @@
 .dashboardCard {
-  width: 100%x;
-  height: 300px;
+  height: 250px;
   padding: 18px 22px;
   border-radius: 14px;
-  background: var(--card-bg, #ffffff);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 10px;
- 
   transition: 0.3s ease all;
+}
+
+.dashboardCard:not(.restaurant) {
+  background: rgb(250, 250, 250);
+}
+
+.dashboardCard.restaurant {
+  background: linear-gradient(140deg, var(--detail3), rgb(250, 250, 250));
+  color: rgb(255, 255, 255);
 }
 
 .dashboardCard:hover {
@@ -24,6 +30,10 @@
   font-weight: 700;
 }
 
+.header.restaurant h3 {
+  color: rgb(255, 255, 255)
+}
+
 .description p {
   margin: 0;
   color: #333;
@@ -31,5 +41,3 @@
   line-height: 1.4;
   text-align: left;
 }
-
-

@@ -12,6 +12,7 @@ function Sidebar({ setSidebarOpen }) {
   const Logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
+    localStorage.removeItem("userName");
     navigate("/");
   };
 
@@ -51,7 +52,7 @@ function Sidebar({ setSidebarOpen }) {
       </div>
       <menu className={styles.menu}>
         <ul className={styles.menuList}>
-          <Link to="/admin/restaurants" className={styles.a}>
+          <Link to="/admin/menu-management" className={styles.a}>
             <li title="Dashboard" className={styles.active}>
               <span className={styles.icon}>
                 <i className="fa-solid fa-house"></i>
@@ -75,6 +76,14 @@ function Sidebar({ setSidebarOpen }) {
               <span className={styles.text}>Gestión de Menús</span>
             </li>
           </Link> */}
+          <Link to="/admin/restaurants" className={styles.a}>
+            <li title="Pedidos">
+              <span className={styles.icon}>
+                <i className="fa-solid fa-burger"></i>
+              </span>
+              <span className={styles.text}>Alimentos</span>
+            </li>
+          </Link>
           <Link to="/admin/restaurants" className={styles.a}>
             <li title="Pedidos">
               <span className={styles.icon}>

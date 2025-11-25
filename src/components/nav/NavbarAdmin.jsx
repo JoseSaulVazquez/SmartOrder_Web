@@ -7,11 +7,9 @@ import { userData } from "../../utils/Users";
 import userImage from "../../../src/assets/varios/user_Image.png";
 
 function NavbarAdmin() {
-  const location = useLocation().pathname;
   const token = localStorage.getItem("token");
   const [user, setUser] = useState();
   const [name, setName] = useState("Usuario");
-  const [menuOpen, setMenuOpen] = useState(false);
   const [image, setImage] = useState(userImage);
 
   useEffect(() => {
@@ -34,6 +32,7 @@ function NavbarAdmin() {
   useEffect(() => {
     if (user && user.name) {
       setName(user.name.name);
+      localStorage.setItem("userName", user.name.name)
     }
   }, [user]);
 
