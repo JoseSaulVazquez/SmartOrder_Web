@@ -59,14 +59,14 @@ function Sidebar() {
               <span className={styles.text}>Mis Restaurantes</span>
             </li>
           </Link>
-          <Link to="/admin/restaurants" className={styles.a}>
+          {/* <Link to="/admin/restaurants" className={styles.a}>
             <li title="Gestión de Menús">
               <span className={styles.icon}>
                 <i className="fa-solid fa-box"></i>
               </span>
               <span className={styles.text}>Gestión de Menús</span>
             </li>
-          </Link>
+          </Link> */}
           <Link to="/admin/restaurants" className={styles.a}>
             <li title="Pedidos">
               <span className={styles.icon}>
@@ -75,14 +75,14 @@ function Sidebar() {
               <span className={styles.text}>Pedidos</span>
             </li>
           </Link>
-          <Link to="/admin/restaurants" className={styles.a}>
+          {/* <Link to="/admin/restaurants" className={styles.a}>
             <li title="Configuración">
               <span className={styles.icon}>
                 <i className="fa-solid fa-gear"></i>
               </span>
               <span className={styles.text}>Configuración</span>
             </li>
-          </Link>
+          </Link> */}
           <Link to="/admin/restaurants" className={styles.a}>
             <li title="Reportes">
               <span className={styles.icon}>

@@ -192,3 +192,10 @@
 .delete_button:hover {
   background-color: #d32f2f;
 }
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+
+}
