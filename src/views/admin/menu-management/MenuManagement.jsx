@@ -48,6 +48,8 @@ function MenuManagement() {
         <h1 className={styles.title}>
           Bienvenido {user?.name?.name || "Usuario"}
         </h1>
+        <p className={styles.subText}>Bienvenido a tu administrador de datos para tu(s) restaurantes</p>
+
         <div className={styles.cards}>
           <DashboardCard
             title="Restaurantes"
@@ -69,21 +71,6 @@ function MenuManagement() {
             description="Administra tus restaurantes aquí"
             type="qwerty"
           />
-        </div>
-        <div className={styles.panels_container}>
-          <section className={styles.panel_left}>
-            <h2>{editar ? "Editar Platillo" : "Agregar Nuevo Platillo"}</h2>
-            <PlatilloForm
-              obtenerPlatillos={obtenerPlatillos}
-              editar={editar}
-              setEditar={setEditar}
-            />
-          </section>
-
-          <section className={styles.panel_right}>
-            <h2>Lista de Platillos</h2>
-            <PlatilloList key={actualizar} editarPlatillo={setEditar} />
-          </section>
         </div>
       </Management>
 
