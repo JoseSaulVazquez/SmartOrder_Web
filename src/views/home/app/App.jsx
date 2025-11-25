@@ -45,8 +45,7 @@ function App() {
                   </h3>
 
                   <p>
-                    Disponible en página web y aplicación móvil, cuenta con
-                    compatibilidad con smartwatch para mayor comodidad. No
+                    Disponible en página web y aplicación móvil para mayor comodidad. No
                     importa dónde estés, siempre tendrás el control de los
                     pedidos.
                   </p>
@@ -94,8 +93,7 @@ function App() {
 
                   <p>
                     Explora el menú por categorías: Desayunos, Comidas, Cenas, Bebidas y Postres. 
-                    Accede a promociones exclusivas y personaliza tus pedidos con ingredientes y detalles específicos antes de enviarlos a la cocina. 
-                    Además, podrás conocer el tiempo estimado de tu orden.
+                    Accede a promociones exclusivas y personaliza tus pedidos con ingredientes y detalles específicos antes de enviarlos a la cocina.
                   </p>
                 </div>
 

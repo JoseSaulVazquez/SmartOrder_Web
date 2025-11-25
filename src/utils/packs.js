@@ -1,6 +1,6 @@
 const packs = [
   {
-    name: "Aplicación móvil",
+    name: "Estandar",
     // image: "https://www.smartorder.mx/img/pack_default.png",
     price: [50],
     tipo_pago: "Mensual",
@@ -10,19 +10,19 @@ const packs = [
       "Soporte técnico",
     ],
   },
-  {
-    name: "Estandar",
-    // image: "https://www.smartorder.mx/img/pack_default.png",
-    price: [200, 150],
-    tipo_pago: "Mensual",
-    description:
-      "Paquete por defecto, incluye el sistema de pedidos y la app",
-    features: [
-      "Optimizacion en la toma de pedidos",
-      "Instalación y configuración gratis",
-      "Todo lo que se incluye en el plan Aplicación móvil",
-    ],
-  },
+  // {
+  //   name: "Estandar",
+  //   // image: "https://www.smartorder.mx/img/pack_default.png",
+  //   price: [200, 150],
+  //   tipo_pago: "Mensual",
+  //   description:
+  //     "Paquete por defecto, incluye el sistema de pedidos y la app",
+  //   features: [
+  //     "Optimizacion en la toma de pedidos",
+  //     "Instalación y configuración gratis",
+  //     "Todo lo que se incluye en el plan Aplicación móvil",
+  //   ],
+  // },
   {
     name: "Premium",
     // image: "https://www.smartorder.mx/img/pack_premium.png",
@@ -32,7 +32,6 @@ const packs = [
       "Paquete Premium, incluye manejo de mesas y la app con personalización",
     features: [
       "Administración de datos",
-      "Costo de instalación variable",
       "Verificación de sucursales",
       "Capacidad para hasta 3 sucursales",
       "Todo lo que se incluye en el plan Estandar",

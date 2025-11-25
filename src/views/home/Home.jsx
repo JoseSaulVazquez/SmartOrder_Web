@@ -62,8 +62,7 @@ function Home() {
           <div className={classNames(styles.section_container)}>
             <RightImage
               text="Smart Order agiliza los pedidos en restaurantes con una interfaz 
-                    intuitiva y adaptable. Integra soporte para personas con discapacidad 
-                    visual mediante Alexa y permite a los dueños personalizar sus menús 
+                    intuitiva y adaptable. Permite a los dueños personalizar sus menús 
                     para una gestión más eficiente."
               image={image01}
               title="Innovación en la Gestión de Pedidos para Restaurantes"
@@ -131,7 +130,7 @@ function Home() {
               text={
                 <>
                   Realiza tus pedidos y reservaciones de forma rápida y
-                  sencilla. ó <br />
+                  sencilla ó <br />
                   Controla pedidos, optimiza tiempos y mejora la experiencia de
                   tus clientes, todo desde la palma de tu mano."
                 </>
