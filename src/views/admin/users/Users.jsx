@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Footer from "../../../components/footer/Footer";
-import styles from "./Users.module.css";
+import styles from "./users.module.css";
 import { Management } from "../../../components/layouts/Layouts";
 import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 import { getUsers } from "../../../utils/Users";
