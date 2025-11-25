@@ -1,6 +1,6 @@
 /* --- TÍTULO --- */
 .title {
-  text-align: center;       /* <-- CENTRADO */
+  text-align: center;
   margin-bottom: 2rem;
   color: rgb(250, 180, 100);
   font-size: 2rem;
@@ -11,60 +11,64 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* <-- CENTRAR TODO */
+  align-items: center;
 }
 
-/* --- PANELES (Form + Lista) --- */
+/* --- PANELES --- */
 .panels_container {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;  /* <-- CENTRAR PANELES */
   width: 100%;
-  max-width: 1200px;        /* <-- LIMITAR ESPACIO PARA QUE NO SE ABRAN DEMASIADO */
+  max-width: 90%;
   margin-top: 2rem;
 }
 
 /* Panel izquierdo (formulario) */
 .panel_left {
-  flex: 1;
-  min-width: 350px;
-  max-width: 500px;         /* <-- MÁS GRANDE */
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 /* Panel derecho (lista) */
 .panel_right {
-  flex: 1.3;                /* <-- UN POCO MÁS ANCHO QUE EL FORM */
-  min-width: 380px;
-  max-width: 600px;         /* <-- YA NO ES PEQUEÑO, PERO EQUILIBRADO */
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-/* --- FORMULARIO --- */
+/* --- FORMULARIO EN DOS COLUMNAS --- */
 .platillo_form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem 1.5rem;
+}
+
+.input_group {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+}
+
+.textarea_group {
+  grid-column: span 2;
 }
 
 .input_group label {
   font-weight: bold;
   color: #502314;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
-/* TODOS LOS INPUTS Y TEXTAREAS MISMO TAMAÑO */
+/* Inputs */
 .input_field,
 .textarea_field {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 0.9rem;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #ccc;
@@ -81,12 +85,13 @@
 }
 
 .textarea_field {
-  min-height: 90px;
+  min-height: 70px;
   resize: vertical;
 }
 
 /* BOTÓN */
 .submit_button {
+  grid-column: span 2;
   padding: 0.9rem 1.5rem;
   background-color: rgb(240,160,80);
   color: white;
@@ -95,7 +100,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background .3s;
-  width: fit-content;
+  justify-self: center;
 }
 
 .submit_button:hover {
@@ -109,7 +114,7 @@
   color: #502314;
 }
 
-/* TARJETAS */
+/* Tarjetas */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
