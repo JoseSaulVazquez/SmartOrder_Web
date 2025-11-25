@@ -84,7 +84,7 @@ function Sidebar({ setSidebarOpen }) {
               <span className={styles.text}>Alimentos</span>
             </li>
           </Link>
-          <Link to="/admin/restaurants" className={styles.a}>
+          <Link to="/admin/orders" className={styles.a}>
             <li title="Pedidos">
               <span className={styles.icon}>
                 <i className="fa-solid fa-list"></i>
@@ -100,12 +100,20 @@ function Sidebar({ setSidebarOpen }) {
               <span className={styles.text}>Configuración</span>
             </li>
           </Link> */}
-          <Link to="/admin/restaurants" className={styles.a}>
+          <Link to="/admin/reports" className={styles.a}>
             <li title="Reportes">
               <span className={styles.icon}>
                 <i className="fa-solid fa-file"></i>
               </span>
               <span className={styles.text}>Reportes y estadísticas</span>
+            </li>
+          </Link>
+          <Link to="/admin/users" className={styles.a}>
+            <li title="Usuarios">
+              <span className={styles.icon}>
+                <i className="fa-solid fa-user"></i>
+              </span>
+              <span className={styles.text}>Usuarios</span>
             </li>
           </Link>
         </ul>
