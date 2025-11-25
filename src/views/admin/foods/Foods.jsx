@@ -12,7 +12,7 @@ function Foods() {
     price: "",
     category: "",
     details: "",
-  });
+  }); 
 
   const [foods, setFoods] = useState([]);
 
