@@ -35,6 +35,7 @@ import MenuCart from "./views/user/cart/Cart.jsx";
 import Order from "./views/user/order/Order.jsx";
 
 import MenuManagement from "./views/admin/menu-management/MenuManagement.jsx";
+import Restaurant from "./views/admin/Restaurants/Restaurant.jsx";
 
 
 createRoot(document.getElementById("root")).render(
@@ -82,6 +83,8 @@ createRoot(document.getElementById("root")).render(
           <Route path="/404" element={<Foods />} />
 
           <Route path="/admin/menu-management" element={<MenuManagement />} />
+          <Route path="/admin/restaurants" element={<Restaurant />} />
+
 
 
         </Routes>

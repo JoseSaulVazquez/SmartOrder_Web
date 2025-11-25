@@ -11,25 +11,23 @@ function Login() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-const handleLogin = (e) => {
-  e.preventDefault();
+    const formData = {
+      email,
+      password,
+      remember,
+    };
 
-  const formData = {
-    email: email,
-    password: password,
-    remember: remember,
+    const success = await login(formData);
+
+    if (success) {
+      navigator("/admin/menu-management");
+    } else {
+      alert("Credenciales incorrectas");
+    }
   };
-
-  console.log("SI ingresan w");
-  
-  const success = login(formData);
-
-  if (success) {
-    // Redirige al menú de administración en lugar de la página principal
-    navigator("/admin/menu-management");
-  }
-};
 
   return (
     <main className={styles.login_container}>

@@ -57,8 +57,6 @@ function Navbar() {
   const active2 = location.split("/")[2];
   const admin = location.split("/")[1] === "admin";
 
-  console.log(admin);
-
   const headerStyle =
     location === "/"
       ? styles.specialHeader

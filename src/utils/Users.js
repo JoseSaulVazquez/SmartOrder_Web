@@ -14,11 +14,8 @@ async function sing_in(data) {
 }
 
 async function login(data) {
-  //   const data = data;
-
   try {
     const response = await axios.post(`${URI}/api/login`, data);
-    console.log(response.data);
 
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("role", response.data.rol);
@@ -32,12 +29,12 @@ async function login(data) {
 async function userData(token) {
   
   try {
-    const response = await axios.get(`${URI}/userData`, {
+    const response = await axios.get(`${URI}/auth/userData`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
-    // console.log(response.data.data);
+
     return response.data.data;
   } catch (error) {
     console.error("Error en el login:", error.response?.data || error.message);

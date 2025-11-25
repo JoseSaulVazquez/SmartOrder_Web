@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 import PlatilloForm from "./PlatilloForm";
 import PlatilloList from "./PlatilloForm";
 import styles from "./menuManagement.module.css";
-import Navbar from "../../../components/nav/Navbar";
-import Sidebar from "../../../components/sidebar/Sidebar";
 import { Management } from "../../../components/layouts/Layouts";
+import NavbarAdmin from "../../../components/nav/NavbarAdmin";
 
 function MenuManagement() {
   const [editar, setEditar] = useState(null);
@@ -16,7 +15,7 @@ function MenuManagement() {
 
   return (
     <>
-      <Navbar />
+      <NavbarAdmin />
 
       <Management>
         <h1 className={styles.title}>Gestión de Menú</h1>
