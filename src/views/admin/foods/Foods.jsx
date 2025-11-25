@@ -72,7 +72,8 @@ function Foods() {
               />
             </div>
 
-            <div className={styles.input_group}>
+            {/* DESCRIPCIÓN → ahora ocupa 2 columnas */}
+            <div className={`${styles.input_group} ${styles.textarea_group}`}>
               <label>Descripción</label>
               <textarea
                 className={styles.textarea_field}
@@ -104,7 +105,8 @@ function Foods() {
               />
             </div>
 
-            <div className={styles.input_group}>
+            {/* DETALLES → también ocupa 2 columnas */}
+            <div className={`${styles.input_group} ${styles.textarea_group}`}>
               <label>Detalles</label>
               <textarea
                 className={styles.textarea_field}
