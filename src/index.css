@@ -10,6 +10,8 @@
   color: var(--color);
   background: var(--bg-color);
 
+  --sidebarSize: 290px;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames";
 
-function Sidebar() {
+function Sidebar({ setSidebarOpen }) {
   const [active, setActive] = useState(true);
   const navigate = useNavigate();
 
@@ -27,7 +27,12 @@ function Sidebar() {
     >
       <div className={styles.title}>
         <div className={styles.subtitle}>
-          <button className={styles.imageContainer} onClick={open}>
+          <button
+            className={styles.imageContainer}
+            onClick={() => {
+              open(), setSidebarOpen(true);
+            }}
+          >
             <img src={Logo} alt="SmartOrder Logo" />
           </button>
           <h3>SmartOrder</h3>
@@ -36,7 +41,10 @@ function Sidebar() {
         <button
           className={styles.closeButton}
           title="Cerrar menú"
-          onClick={close}
+          onClick={() => {
+            close();
+            setSidebarOpen(false);
+          }}
         >
           <i className="fa-solid fa-x"></i>
         </button>

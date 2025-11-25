@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./layouts.module.css";
 import classNames from "classnames";
@@ -89,15 +89,14 @@ const Imagen = ({ src, alt }) => {
 };
 
 const Management = ({ children }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
     <>
-      <main className={styles.layout}>
-        <Sidebar />
+      <main className={classNames(styles.layout, sidebarOpen ? styles.open : styles.close)}>
+        <Sidebar setSidebarOpen={setSidebarOpen} />
 
-        <div className={styles.content}>
-          {children}
-        </div>
+        <div className={styles.content}>{children}</div>
       </main>
     </>
   );
